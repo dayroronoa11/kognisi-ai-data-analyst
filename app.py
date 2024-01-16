@@ -149,7 +149,7 @@ with st.sidebar:
             ```
             {}
             ```
-            """.format(question))
+            """.format(question["question"]))
     st.markdown("""
     Other Examples:
     - [ChatGPT Data Science Prompt](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts)
