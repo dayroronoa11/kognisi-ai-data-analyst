@@ -2,7 +2,6 @@ from openai import OpenAI
 import streamlit as st
 import time
 import re
-import pyperclip
 
 hide_streamlit_style = """
 <style>
@@ -145,8 +144,12 @@ with st.sidebar:
     st.markdown("Example prompt [Source](https://github.com/cameronjoejones/streamlit-gpt-data-assistant/blob/main/question_bank.py)")
     for k, question in question_bank.items():
         if st.button(k):
-            pyperclip.copy(question["question"])
-            st.success('Text copied successfully!')
+            st.success('Copy the following')
+            st.markdown("""
+            ```
+            {}
+            ```
+            """.format(question))
     st.markdown("""
     Other Examples:
     - [ChatGPT Data Science Prompt](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts)
