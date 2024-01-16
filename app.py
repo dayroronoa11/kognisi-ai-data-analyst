@@ -1,8 +1,5 @@
 from openai import OpenAI
 import streamlit as st
-import pandas as pd
-import psycopg2
-import json
 import time
 import re
 import pyperclip
